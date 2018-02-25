@@ -1,0 +1,76 @@
+/*
+ *  Fazer um programa que mostre o seguinte menu:
+ *   1) Ler dois valores inteiros 2) Somar
+ *   3) Subtrair
+ *   4) Dividir
+ *   5) Multiplicar 6) Sair
+ */
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author Patrick de Freitas
+ */
+ 
+ 
+public class Calculadora_dad_ex_1 {
+
+    public static void main(String[] args) {
+
+     Funcoes operacao = new Funcoes();
+     int op; 
+     do{
+        op = Integer.parseInt((JOptionPane.showInputDialog("1- ler valores\n2- Somar\n3- Subtrair\n4- Dividir\n5- Multiplicar\n6- Sair")));
+        switch(op){
+            case 1: operacao.leitor(); break;
+            case 2: operacao.somar(); break;
+            case 3: operacao.subtrair(); break;
+            case 4: operacao.dividir(); break;
+            case 5: operacao.multiplicar(); break;
+        }
+     }while(op!=6);
+     JOptionPane.showMessageDialog(null,"Finalizado com Sucesso");
+    }
+    
+}
+
+class Funcoes{
+    
+    double num1, num2;
+   
+    public void leitor(){
+        
+        this.num1=Double.parseDouble(JOptionPane.showInputDialog("Informe um Numero"));
+        this.num2=Double.parseDouble(JOptionPane.showInputDialog("Informe um Numero"));
+     
+    }
+    
+    public void somar(){
+        double resultado;
+        resultado = num1 + num2;
+        JOptionPane.showMessageDialog(null, "O resultado de " + num1 +" + "+ num2 + " é: " + resultado  );
+    }
+    
+    public void subtrair(){
+        double resultado;
+        resultado = num1 - num2;
+        JOptionPane.showMessageDialog(null, "O resultado de " + num1 +" - "+ num2 + " é: " + resultado  );
+    }
+    
+    public void dividir(){
+        double resultado;
+        resultado = num1 / num2;
+        JOptionPane.showMessageDialog(null, "O resultado de " + num1 +" / "+ num2 + " é: " + resultado  );
+    }
+    
+    public void multiplicar(){
+        double resultado;
+        resultado = num1 * num2;
+        JOptionPane.showMessageDialog(null, "O resultado de " + num1 +" * "+ num2 + " é: " + resultado  );
+    }
+    
+    
+    
+    
+}
