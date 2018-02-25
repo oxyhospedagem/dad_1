@@ -1,2 +1,2 @@
 # dad_1
-Exercício 1 de Estrutura de dados UDESC CEPLAN
+Exercícios de Estrutura de dados UDESC CEPLAN 
